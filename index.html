@@ -2,54 +2,95 @@
 <html lang="en-us">
 
 <head>
-    <title> Latitude Analysis Dashboard</title>
+    <meta charset="UTF-8">
+    <title>Latitude Analysis</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        
-        <!-- title of index page-->
+ 
+    <!-- Nav Bar elements source: https://getbootstrap.com/docs/4.0/components/navbar/-->
+    <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light">
+
+        <!-- Page Title in Navbar for home page navigation -->
         <a class="navbar-brand" href="index.html">Latitude Analysis</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+        <!-- Change navbar style when screen is smaller (toggle to hamburger menu) -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                data-target="#navbar_001" aria-controls="navbar_001" 
+                aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id= "navbar_001">
-            <!-- auto align the page items-->
+        <div class="collapse navbar-collapse" id="navbar_001">
+
             <ul class="navbar-nav ml-auto">
+                
+                <!-- Dropdown menu from the side -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id= "navbar_menu" data-toggle="dropdown">Plots</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropmenu002" 
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropmenu002">
+                        <a class="dropdown-item" href="temperature.html">Temperature</a>
+                        <a class="dropdown-item" href="humidity.html">Humidity</a>
+                        <a class="dropdown-item" href="clouds.html">Cloudiness</a>
+                        <a class="dropdown-item" href="wind_speed.html">Wind Speed</a>
+                    </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id= "navbar_menu" data-toggle="dropdown">Comparison</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id= "navbar_menu" data-toggle="dropdown">Data</a>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="comparison.html">Comparison</a>
                 </li>
 
-
-
-
-
+                <!-- Navbar Data page link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="datapage.html">Data</a>
+                </li>
             </ul>
-      
+        </div>
+    </nav>
 
+    <div class="row content">
+        <div class="col-sm-12 col-md-8 col-lg-8">
+            <h2 class="text-left" id="heading2">Summary: Latitude vs. X</h2>
+            <hr class="my-4">
+            <img src="Resources/assets/images/Fig1.png" alt="Latitude vs Temperature" class="rounded main-image" id="img_large">
+            <p>
+            The purpose of this project was to analyse how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the 
+            OpenWeatherMap API to assemble a dataset on over 500 cities.
+            <br><br>
+            After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included:
+            temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations
+            and descriptions of any trends and correlations witnessed.
+            </p>
+        
+        
+        </div>
+         <div class="col-sm-12 col-md-4 col-lg-4" >
+            <h2 class="text-left">Visualizations</h2>
+            <hr class="my-4">
+            <a href="temperature.html">
+                <img src="Resources/assets/images/Fig1.png" class="rounded float-left thumbnail" alt="Latitude vs Temperature" id="img_small">
+            </a>
+            <a href="humidity.html">
+                <img src="Resources/assets/images/Fig2.png" class="rounded float right thumbnail" alt="Latitude vs Humidity" id="img_small">
+            </a>
+            <a href="cloudiness.html">
+                <img src="Resources/assets/images/Fig3.png" class="rounded float-left  thumbnail" alt="Latitude vs Temperature" id="img_small">
+            </a>
+            <a href="wind_speed.html">
+                <img src="Resources/assets/images/Fig4.png" class="rounded float right  thumbnail" alt="Latitude vs Humidity" id="img_small">
+            </a>
+        </div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-</body>
-
-
-
+ </body>
 
 </html>
