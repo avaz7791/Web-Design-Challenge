@@ -14,7 +14,7 @@ body {
   
 
 #img_small {
-    height:150px;
+    height:120px;
 }
 #heading2 {
     
@@ -29,28 +29,10 @@ body {
     background: white;
 }
 
-#plotviz {
-    height:127px;
-    outline: 4px solid transparent;
-    padding: 2px 2px;
-    border: 4px solid darkslategray;
-
-}
-
-#myTable {
-    width:100%;
-    height:1000px;
-}
-
-#dataPage {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color:darkslategray;
-}
 #box_left {
     height: 750px;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 40px;
     color: darkslategray;
     background: white;
@@ -58,34 +40,9 @@ body {
 #box_right {
     height: 400px;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 40px;
     color: darkslategray;
     background: white;
 }
-#vizbox {
-    color: darkslategray;
-    margin-top: 20px;
-    margin-bottom: 100px;
-}
 
-
-img {
-    padding: 5px;
-}
-
-#vizimage:hover, #imgbox:hover {
-    outline: 0px solid transparent;
-    padding: 5px 5px;
-    border: 5px solid darkslategray;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
- }
-
- #vizimage, #imgbox {
-    outline: 0px solid darkslategray;
-    padding: 0px 0px;
-    border: 5px solid transparent;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
